@@ -19,14 +19,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 Route::get('/admin', function(){
     return view('admin.index');
 });
 
 Route::resource('admin/users', 'AdminUsersController');
+
+// Route::get('/admin/users/index', 'AdminUsersController@index')->name('admin.users.index');
+
+// Route::get('/admin/users/create', 'AdminUsersController@create')->name('admin.users.create');
+
+// Route::post('/admin/users/photo', 'AdminUsersController@store')->name('admin.users.photo');
+

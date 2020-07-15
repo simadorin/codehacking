@@ -1,0 +1,17 @@
+[33mcommit f5f95e632daa4615d520b7fbfafdb3ac67a16417[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Dorin Sima <sima.dorin.octavian@gmail.com>
+Date:   Wed Jul 15 11:13:23 2020 +0300
+
+    users page working withouth photos
+
+[33mcommit ab676766e2995ae43a8fc6145bfad49b5514fbc6[m
+Author: Dorin Sima <sima.dorin.octavian@gmail.com>
+Date:   Tue Jul 14 12:11:39 2020 +0300
+
+    admin master page setup
+
+[33mcommit 3531bb3c2dd95b22b820f7ce8798c085c98f696d[m
+Author: Dorin Sima <sima.dorin.octavian@gmail.com>
+Date:   Tue Jul 14 10:12:16 2020 +0300
+
+    my first commit - admin views created
