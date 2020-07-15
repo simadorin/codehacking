@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+use App\Role;
+use App\Photo;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -43,6 +46,8 @@ class User extends Authenticatable
     }
 
     public function photo(){
-        return $this-BelongsTo('App\Photo');
+
+        return $this->belongsTo('App\Photo');
+
     }
 }
