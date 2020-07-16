@@ -68,6 +68,8 @@ class AdminUsersController extends Controller
 
         User::create($input);
 
+        session()->flash('created_user', 'User has been Created');
+
         return redirect('/admin/users');
     }
 
@@ -132,6 +134,8 @@ class AdminUsersController extends Controller
 
         $user->update($input);
 
+        session()->flash('updated_user', 'User has been Updated');
+
         return redirect('admin/users');
     }
 
@@ -143,6 +147,14 @@ class AdminUsersController extends Controller
      */
     public function destroy($id)
     {
-        return view('admin.uses.destroy');
+        $user = User::findOrFail($id);
+
+        unlink('C:/Users/Dorin/Documents/School/codehacking/' .$user->photo->file);
+
+        $user->delete();
+
+        session()->flash('deleted_user', 'User has been Deleted');
+
+        return redirect('/admin/users');
     }
 }

@@ -14,22 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return view('welcome');
+
 });
 
-Auth::routes();
+Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/admin', function(){
+
+Route::get('/admin', function () {
+
     return view('admin.index');
+
 });
 
-Route::resource('admin/users', 'AdminUsersController');
 
-// Route::get('/admin/users/index', 'AdminUsersController@index')->name('admin.users.index');
+Route::group(['middleware'=>'admin'], function(){
 
-// Route::get('/admin/users/create', 'AdminUsersController@create')->name('admin.users.create');
+    Route::resource('admin/users', 'AdminUsersController');
 
-// Route::post('/admin/users/photo', 'AdminUsersController@store')->name('admin.users.photo');
+    Route::resource('admin/posts', 'AdminPostsController');
 
+
+
+});
