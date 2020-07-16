@@ -18,7 +18,7 @@
             {{-- <div class="row">
                 <div class='col-sm-6'> --}}
                     {!! Form::label('category_id', 'Category:') !!}
-                    {!! Form::select('category_id', array(0=>'--Choose Option--', 1=>'PHP', 2=>'JavaScript'), 0, ['class'=>'form-control']) !!}
+                    {!! Form::select('category_id', [''=>'--Choose Category--'] + $categories, null, ['class'=>'form-control']) !!}
                 {{-- </div>
             </div> --}}
         </div>
